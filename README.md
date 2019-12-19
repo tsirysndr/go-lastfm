@@ -24,7 +24,7 @@ import "github.com/tsirynsdr/go-lastfm"
 Construct a new Last.fm client, then use the various services on the client to access different parts of the Last.fm API. For example:
 
 ```Go
-client := lastfm.NewClient(<YOUR API KEY>)
+client := lastfm.NewClient("<YOUR API KEY>")
 ```
 
 ## Author
