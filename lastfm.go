@@ -6,7 +6,6 @@ import (
 
 type Client struct {
 	base    *sling.Sling
-	apikey  string
 	common  service
 	Album   *AlbumService
 	Artist  *ArtistService
@@ -20,11 +19,16 @@ type service struct {
 	client *Client
 }
 
+type Params struct {
+	ApiKey string `url:"api_key"`
+	Format string `url:"format"`
+}
+
 func NewClient(apikey string) *Client {
-	base := sling.New().Base("http://ws.audioscrobbler.com/2.0/")
+	params := &Params{apikey, "json"}
+	base := sling.New().Base("http://ws.audioscrobbler.com/2.0/").QueryStruct(params)
 	c := &Client{}
 	c.base = base
-	c.apikey = apikey
 	c.common.client = c
 	c.Album = (*AlbumService)(&c.common)
 	c.Artist = (*ArtistService)(&c.common)
