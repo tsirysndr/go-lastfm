@@ -21,13 +21,13 @@
 
 go-lastfm is a Go client library for accessing the [Last.fm API](http://www.last.fm/api/)
 
-## Install
+## 🚚 Install
 
 ```sh
 go get github.com/tsirynsdr/go-lastfm
 ```
 
-## Usage
+## 🚀 Usage
 
 Import the package into your project.
 
@@ -39,6 +39,9 @@ Construct a new Last.fm client, then use the various services on the client to a
 
 ```Go
 client := lastfm.NewClient("<YOUR API KEY>")
+res, _ := client.Artist.GetInfo("Travis Scott")
+info, _ := json.Marshal(res)
+fmt.Println(string(info))
 ```
 
 ## Author
