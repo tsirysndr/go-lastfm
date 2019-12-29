@@ -20,8 +20,8 @@ type service struct {
 }
 
 type Params struct {
-	ApiKey string `url:"api_key"`
-	Format string `url:"format"`
+	ApiKey string `url:"api_key,omitempty"`
+	Format string `url:"format,omitempty"`
 }
 
 func NewClient(apikey string) *Client {

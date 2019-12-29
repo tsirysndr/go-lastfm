@@ -3,55 +3,55 @@ package lastfm
 type ArtistService service
 
 type ArtistInfo struct {
-	Artist *Artist `json:"artist"`
+	Artist *Artist `json:"artist,omitempty"`
 }
 
 type Artist struct {
-	Name       string  `json:"name"`
-	URL        string  `json:"url"`
-	Image      []Image `json:"image"`
-	Streamable string  `json:"streamable"`
-	OnTour     string  `json:"ontour"`
+	Name       string  `json:"name,omitempty"`
+	URL        string  `json:"url,omitempty"`
+	Image      []Image `json:"image,omitempty"`
+	Streamable string  `json:"streamable,omitempty"`
+	OnTour     string  `json:"ontour,omitempty"`
 	Stats      *struct {
-		Listeners string `json:"listeners"`
-		PlayCount string `json:"playcount"`
-	} `json:"stats"`
+		Listeners string `json:"listeners,omitempty"`
+		PlayCount string `json:"playcount,omitempty"`
+	} `json:"stats,omitempty"`
 	Similar *struct {
-		Artist []Artist `json:"artist"`
-	} `json:"similar"`
+		Artist []Artist `json:"artist,omitempty"`
+	} `json:"similar,omitempty"`
 	Tags *struct {
-		Tag []Tag `json:"tag"`
-	} `json:"tags"`
-	Bio *Bio `json:"bio"`
+		Tag []Tag `json:"tag,omitempty"`
+	} `json:"tags,omitempty"`
+	Bio *Bio `json:"bio,omitempty"`
 }
 
 type Image struct {
-	Text string `json:"#text"`
-	Size string `json:"size"`
+	Text string `json:"#text,omitempty"`
+	Size string `json:"size,omitempty"`
 }
 
 type Tag struct {
-	Name string `json:"name"`
-	URL  string `json:"url"`
+	Name string `json:"name,omitempty"`
+	URL  string `json:"url,omitempty"`
 }
 
 type Bio struct {
 	Links *struct {
-		Link *Link `json:"link"`
-	} `json:"links"`
-	Published string `json:"published"`
-	Summary   string `json:"summary"`
+		Link *Link `json:"link,omitempty"`
+	} `json:"links,omitempty"`
+	Published string `json:"published,omitempty"`
+	Summary   string `json:"summary,omitempty"`
 }
 
 type Link struct {
-	Text string `json:"#text"`
-	Rel  string `json:"rel"`
-	Href string `json:"href"`
+	Text string `json:"#text,omitempty"`
+	Rel  string `json:"rel,omitempty"`
+	Href string `json:"href,omitempty"`
 }
 
 type ArtistQuery struct {
-	Method string `url:"method"`
-	Artist string `url:"artist"`
+	Method string `url:"method,omitempty"`
+	Artist string `url:"artist,omitempty"`
 }
 
 func (s *ArtistService) Search(artist string) (*SearchResults, error) {
