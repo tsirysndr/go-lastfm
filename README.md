@@ -6,10 +6,18 @@
   </a>
   <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/tsirysndr/go-lastfm">
   <img alt="GitHub go.mod Go version" src="https://img.shields.io/github/go-mod/go-version/tsirysndr/go-lastfm">
-  <img alt="GitHub closed pull requests" src="https://img.shields.io/github/issues-pr-closed-raw/tsirysndr/go-lastfm">
-  <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/tsirysndr/go-lastfm">
-  <img alt="GitHub issues" src="https://img.shields.io/github/issues/tsirysndr/go-lastfm">
-  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/tsirysndr/go-lastfm">
+  <a href="https://github.com/tsirysndr/go-lastfm/issues?q=is%3Apr+is%3Aclosed">
+    <img alt="GitHub closed pull requests" src="https://img.shields.io/github/issues-pr-closed-raw/tsirysndr/go-lastfm">
+  </a>
+  <a href="https://github.com/tsirysndr/go-lastfm/pulls">
+    <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/tsirysndr/go-lastfm">
+  </a>
+  <a href="https://github.com/tsirysndr/go-lastfm/issues">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/tsirysndr/go-lastfm">
+  </a>
+  <a href="https://github.com/tsirysndr/go-lastfm/graphs/contributors">
+    <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/tsirysndr/go-lastfm">
+  </a>
   <a href="https://github.com/tsirysndr/go-lastfm/blob/master/LICENSE">
     <img alt="License: BSD" src="https://img.shields.io/badge/license-BSD-green.svg" target="_blank" />
   </a>
